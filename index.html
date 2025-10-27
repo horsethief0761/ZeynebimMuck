@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Şarkılarım</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { text-align: center; padding: 30px 0; margin-bottom: 40px; }
+        h1 { font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px; }
+        .player-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px; }
+        .player { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 30px; width: 100%; max-width: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .love-player { background: linear-gradient(135deg, #ff6b6b, #ff8e8e, #ffafbd); }
+        .enemy-player { background: linear-gradient(135deg, #434343, #000000); }
+        .player-title { font-size: 2rem; margin-bottom: 20px; text-align: center; }
+        .album-art { width: 200px; height: 200px; border-radius: 50%; margin: 0 auto 20px; border: 5px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .love-art { background: linear-gradient(135deg, #ff6b6b, #ff8e8e); }
+        .enemy-art { background: linear-gradient(135deg, #434343, #000000); }
+        audio { width: 100%; border-radius: 30px; outline: none; }
+        .message { text-align: center; margin-top: 20px; font-style: italic; padding: 10px; border-radius: 10px; background: rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .player-container { flex-direction: column; } .player { width: 90%; } h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Özel Şarkılarım</h1>
+            <p class="subtitle">Sevgilim ve düşmanlarım için hazırladığım özel şarkılar</p>
+        </header>
+        
+        <div class="player-container">
+            <!-- Sevgilim Zeynep için -->
+            <div class="player love-player">
+                <div class="player-content">
+                    <h2 class="player-title">❤️ Sevgilim Zeynep İçin ❤️</h2>
+                    <div class="album-art love-art">💖</div>
+                    <div class="audio-player">
+                        <audio controls>
+                            <!-- BURAYA SEVGİLİN İÇİN MP3 DOSYA ADINI YAZ -->
+                            <source src="sevgilim-zeynep.mp3" type="audio/mpeg">
+                            Tarayıcınız audio elementini desteklemiyor.
+                        </audio>
+                    </div>
+                    <div class="message">"Kalp atışlarımın ritmi, senin adınla çarpıyor Zeynep'im. Seni seviyorum."</div>
+                </div>
+            </div>
+            
+            <!-- Düşmanlarım için -->
+            <div class="player enemy-player">
+                <div class="player-content">
+                    <h2 class="player-title">💀 Düşmanlarım İçin 💀</h2>
+                    <div class="album-art enemy-art">⚡</div>
+                    <div class="audio-player">
+                        <audio controls>
+                            <!-- BURAYA DÜŞMANLARIN İÇİN MP3 DOSYA ADINI YAZ -->
+                            <source src="dusmanlarim-icin.mp3" type="audio/mpeg">
+                            Tarayıcınız audio elementini desteklemiyor.
+                        </audio>
+                    </div>
+                    <div class="message">"Yoluma çıkan herkes, pişman olacak. Gücümü görün!"</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
